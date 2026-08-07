@@ -1,0 +1,1 @@
+```js export { default } from './About'; ```
