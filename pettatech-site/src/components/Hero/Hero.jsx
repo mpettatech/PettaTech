@@ -1,3 +1,5 @@
+import fotoperfil from "../../assets/fotoperfil.jpeg";
+
 export default function Hero() {
   const services = [
     "Google Empresas",
@@ -48,24 +50,26 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="rounded-[28px] border border-slate-800 bg-slate-900/80 p-5 shadow-2xl shadow-slate-950/60 backdrop-blur-sm">
-              <div className="flex h-80 items-center justify-center rounded-[22px] border border-dashed border-slate-700 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 text-center text-lg font-semibold uppercase tracking-[0.2em] text-slate-300">
-                Sua foto profissional
-              </div>
+            <div className="overflow-hidden rounded-[22px] border border-slate-700 bg-slate-900">
+              <img
+                src={fotoperfil}
+                alt="Foto profissional da Petta Tech"
+                className="h-80 w-full object-cover"
+              />
+            </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                {highlights.map((item, index) => (
-                  <div
-                    key={item.title + index}
-                    className="flex min-h-[104px] flex-col items-center justify-center rounded-2xl border border-slate-700 bg-slate-950/80 px-4 text-center text-slate-100 shadow-md shadow-slate-950/30"
-                  >
-                    <span className="text-xl font-bold text-white">{item.title}</span>
-                    {item.subtitle && (
-                      <span className="mt-1 text-sm text-slate-300">{item.subtitle}</span>
-                    )}
-                  </div>
-                ))}
-              </div>
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              {highlights.map((item, index) => (
+                <div
+                  key={item.title + index}
+                  className="flex min-h-[104px] flex-col items-center justify-center rounded-2xl border border-slate-700 bg-slate-950/80 px-4 text-center text-slate-100 shadow-md shadow-slate-950/30"
+                >
+                  <span className="text-xl font-bold text-white">{item.title}</span>
+                  {item.subtitle && (
+                    <span className="mt-1 text-sm text-slate-300">{item.subtitle}</span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
