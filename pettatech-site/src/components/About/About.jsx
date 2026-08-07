@@ -3,9 +3,9 @@ import './about.css';
 
 const stats = [
   { id: 1, number: '10+', label: 'Anos de Experiência' },
-  { id: 2, number: '500+', label: 'Projetos Entregues' },
+  { id: 2, number: '50+', label: 'Projetos Entregues' },
   { id: 3, number: '200+', label: 'Clientes Satisfeitos' },
-  { id: 4, number: '50+', label: 'Profissionais' },
+  { id: 4, number: '20+', label: 'Automações' },
 ];
 
 const values = [
@@ -44,9 +44,9 @@ export default function About() {
     <section className="about" id="about">
       <div className="about__container">
         <div className="about__header">
-          <h2 className="about__title">Sobre Nós</h2>
+          <h2 className="about__title">Sobre</h2>
           <p className="about__subtitle">
-            Conheça a história por trás de nossas soluções inovadoras
+            Saiba mais sobre a Petta Tech
           </p>
         </div>
 
@@ -54,14 +54,13 @@ export default function About() {
           <div className="about__text">
             <h3>Quem Somos</h3>
             <p>
-              Somos uma empresa especializada em desenvolvimento web e soluções
-              digitais de alta qualidade. Desde nossa fundação, trabalhamos para
-              transformar ideias em produtos digitais que fazem a diferença.
+              A Petta Tech é uma empresa especializada em desenvolvimento web e soluções
+              digitais de alta qualidade. Trabalhamos para transformar ideias em produtos digitais que fazem a diferença.
             </p>
             <p>
-              Nossa equipe é composta por profissionais experientes e
-              apaixonados por tecnologia, sempre buscando as melhores práticas e
-              inovações do mercado.
+              Murilo Di Petta, após anos trabalhando com TI, notou algo importante:  
+              a tecnologia está avançando mais do que a humanidade pode acompanhar.
+              Com o objetivo de conectar pessoas e tecnologia, Murilo decidiu fundar a Petta Tech. 
             </p>
 
             <h3 style={{ marginTop: '2rem' }}>Nossa Missão</h3>
