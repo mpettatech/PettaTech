@@ -11,7 +11,7 @@ export default function Hero() {
   const highlights = [
     { title: "+10 anos", subtitle: "em TI" },
     { title: "SAP B1", subtitle: "Especialista" },
-    { title: "SEO Local", subtitle: "" },
+    { title: "Google Empresas", subtitle: "" },
     { title: "Automação", subtitle: "" },
   ];
 
