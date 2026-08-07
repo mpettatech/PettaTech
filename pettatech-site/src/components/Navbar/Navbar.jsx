@@ -32,7 +32,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://wa.me/55SEUNUMERO"
+            href="https://wa.me/5511911543874"
             target="_blank"
             className="bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-xl font-medium shadow-lg shadow-blue-600/20"
           >
@@ -63,7 +63,7 @@ export default function Navbar() {
             <a href="#contato">Contato</a>
 
             <a
-              href="https://wa.me/55SEUNUMERO"
+              href="https://wa.me/5511911543874"
               className="bg-blue-600 rounded-xl text-center py-3 mt-3"
             >
               Diagnóstico Gratuito
