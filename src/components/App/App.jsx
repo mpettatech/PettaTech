@@ -1,12 +1,12 @@
-import Home from "./Home.jsx"
+import Home from "../Home.jsx"
 
 function App() {
-
-  return <Home />
-
+  return (
+    <div className="bg-slate-950 text-white min-h-screen">
+      <Home />
+    </div>
+  )
 }
-<div className="bg-slate-950 text-white min-h-screen">
-    <Home />
-</div>
+
 export default App
 
