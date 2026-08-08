@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import Contato from "../Contact/Contact";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
