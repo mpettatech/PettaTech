@@ -6,7 +6,7 @@ const WHATSAPP_MESSAGE = "Olá! Vim pelo site da PettaTech e gostaria de saber m
 const EMAIL = "pettatech@outlook.com.br";
 // ------------------------
 
-export default function Contato() {
+export default function Contact() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     WHATSAPP_MESSAGE
   )}`;
@@ -14,7 +14,7 @@ export default function Contato() {
 
   return (
     <section
-      id="contato"
+      id="contact"
       className="w-full bg-gray-50 py-20 px-6 flex flex-col items-center text-center"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
