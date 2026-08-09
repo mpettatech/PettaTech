@@ -3,7 +3,7 @@ import { MessageCircle, Mail } from 'lucide-react';
 import './about.css';
 
 // --- Personalize aqui ---
-const WHATSAPP_NUMBER = '5511999999999'; // DDI + DDD + número, sem espaços/símbolos
+const WHATSAPP_NUMBER = '5511911543874'; // DDI + DDD + número, sem espaços/símbolos
 const WHATSAPP_MESSAGE = 'Olá! Vim pelo site da PettaTech e gostaria de saber mais.';
 const EMAIL = 'contato@pettatech.com.br';
 // ------------------------
@@ -124,7 +124,7 @@ export default function About() {
 
         <div className="about__cta">
           <h3>Quer saber mais?</h3>
-          <p>Entre em contato conosco para melhorar seu negócio</p>
+          <p>Entre em contato para melhorar seu negócio</p>
           <div className="about__cta-buttons">
             <a
               href={whatsappLink}
