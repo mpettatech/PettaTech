@@ -1,5 +1,12 @@
 import React from 'react';
+import { MessageCircle, Mail } from 'lucide-react';
 import './about.css';
+
+// --- Personalize aqui ---
+const WHATSAPP_NUMBER = '5511999999999'; // DDI + DDD + número, sem espaços/símbolos
+const WHATSAPP_MESSAGE = 'Olá! Vim pelo site da PettaTech e gostaria de saber mais.';
+const EMAIL = 'contato@pettatech.com.br';
+// ------------------------
 
 const stats = [
   { id: 1, number: '10+', label: 'Anos de Experiência' },
@@ -40,6 +47,11 @@ const values = [
 ];
 
 export default function About() {
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    WHATSAPP_MESSAGE
+  )}`;
+  const emailLink = `mailto:${EMAIL}`;
+
   return (
     <section className="about" id="about">
       <div className="about__container">
@@ -112,10 +124,22 @@ export default function About() {
 
         <div className="about__cta">
           <h3>Quer saber mais?</h3>
-          <p>Entre em contato conosco e conheça como podemos ajudar seu negócio</p>
-          <a href="#contact" className="about__cta-btn">
-            Fale Conosco
-          </a>
+          <p>Entre em contato conosco para melhorar seu negócio</p>
+          <div className="about__cta-buttons">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about__cta-btn about__cta-btn--whatsapp"
+            >
+              <MessageCircle size={20} />
+              WhatsApp
+            </a>
+            <a href={emailLink} className="about__cta-btn about__cta-btn--email">
+              <Mail size={20} />
+              {EMAIL}
+            </a>
+          </div>
         </div>
       </div>
     </section>

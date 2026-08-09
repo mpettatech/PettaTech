@@ -234,7 +234,13 @@
   color: white;
   border-color: white;
 }
+.about__cta-btn--whatsapp {
+  background-color: #25d366;
+}
 
+.about__cta-btn--email {
+  background-color: #1a1a1a;
+}
 /* Animações */
 @keyframes slideInDown {
   from {
