@@ -122,7 +122,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="about__cta">
+        <div className="about__cta" id="contato">
           <h3>Quer saber mais?</h3>
           <p>Entre em contato para melhorar seu negócio</p>
           <div className="about__cta-buttons">

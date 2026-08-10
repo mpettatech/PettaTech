@@ -28,7 +28,7 @@ export default function Navbar() {
             Sobre
           </a>
 
-          <a href="#contact"
+          <a href="#contato"
             className="text-slate-300 hover:text-white transition">
             Contato
           </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
             <a href="#sobre">Sobre</a>
 
-            <a href="#contact">Contato</a>
+            <a href="#contato">Contato</a>
 
             <a
               href="https://wa.me/5511911543874"
