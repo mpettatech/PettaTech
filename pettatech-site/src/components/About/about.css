@@ -261,9 +261,15 @@
 .about__cta-btn--whatsapp {
   background: rgba(255, 255, 255, 0.12);
 }
+.about__cta-btn--whatsapp svg {
+  color: #25d366;
+}
 /* E-mail */
 .about__cta-btn--email {
   background: rgba(255, 255, 255, 0.12);
+}
+.about__cta-btn--email svg {
+  color: #a5b4fc;
 }
 /* Hover */
 .about__cta-btn:hover {
