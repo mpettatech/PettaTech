@@ -58,7 +58,7 @@ function Footer() {
               </a>
               
                <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/pettatech"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
