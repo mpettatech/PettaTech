@@ -1,5 +1,7 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import Contact from "../Contact/Contact";
+import About from "../About/About";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +38,7 @@ export default function Navbar() {
             target="_blank"
             className="bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-xl font-medium shadow-lg shadow-blue-600/20"
           >
-            Diagnóstico Gratuito
+            Solicitar Diagnóstico
           </a>
 
         </nav>
@@ -66,7 +68,7 @@ export default function Navbar() {
               href="https://wa.me/5511911543874"
               className="bg-blue-600 rounded-xl text-center py-3 mt-3"
             >
-              Diagnóstico Gratuito
+              Solicitar Diagnóstico
             </a>
 
           </nav>

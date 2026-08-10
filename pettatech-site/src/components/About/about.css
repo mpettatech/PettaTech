@@ -196,6 +196,13 @@
 }
 
 /* CTA */
+.about__cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 .about__cta {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 60px 40px;
@@ -218,23 +225,65 @@
 }
 
 .about__cta-btn {
-  display: inline-block;
-  background: white;
-  color: #667eea;
-  padding: 15px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 52px;
+  padding: 14px 24px;
+
   border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid white;
-}
+  font-size: 0.95rem;
 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 8px 20px rgba(31, 41, 55, 0.12);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.about__cta-btn svg {
+  flex-shrink: 0;
+}
+/* WhatsApp */
+.about__cta-btn--whatsapp {
+  background: rgba(255, 255, 255, 0.12);
+}
+.about__cta-btn--whatsapp svg {
+  color: #25d366;
+}
+/* E-mail */
+.about__cta-btn--email {
+  background: rgba(255, 255, 255, 0.12);
+}
+.about__cta-btn--email svg {
+  color: #a5b4fc;
+}
+/* Hover */
 .about__cta-btn:hover {
-  background: transparent;
-  color: white;
-  border-color: white;
+  background: white;
+  color: #667eea;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(31, 41, 55, 0.2);
 }
 
+.about__cta-btn:active {
+  transform: translateY(-1px);
+}
 /* Animações */
 @keyframes slideInDown {
   from {
@@ -338,8 +387,13 @@
     grid-template-columns: 1fr;
   }
 
-  .about__cta-btn {
-    padding: 12px 30px;
-    font-size: 0.9rem;
-  }
+ .about__cta-buttons {
+  flex-direction: column;
+  width: 100%;
+}
+
+.about__cta-btn {
+  width: 100%;
+  max-width: 320px;
+}
 }
