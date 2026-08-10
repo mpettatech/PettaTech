@@ -1,4 +1,4 @@
-import fotoperfil from "../../assets/fotoperfil.jpeg";
+import fotoperfil from "./assets/fotoperfil.jpeg";
 
 export default function Hero() {
   const services = [
