@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircle, Mail } from 'lucide-react';
 import './about.css';
-import fotoperfil from './assets/fotoperfil.jpeg';
+import fotoperfil from "./assets/fotoperfil.jpeg";
 
 // --- Personalize aqui ---
 const WHATSAPP_NUMBER = '5511911543874'; // DDI + DDD + número, sem espaços/símbolos
