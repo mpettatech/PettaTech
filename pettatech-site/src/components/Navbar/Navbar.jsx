@@ -38,7 +38,7 @@ export default function Navbar() {
             target="_blank"
             className="bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-xl font-medium shadow-lg shadow-blue-600/20"
           >
-            Diagnóstico Gratuito
+            Solicitar Diagnóstico
           </a>
 
         </nav>

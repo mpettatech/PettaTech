@@ -53,7 +53,7 @@ export default function About() {
   const emailLink = `mailto:${EMAIL}`;
 
   return (
-    <section className="about" id="about">
+    <section className="about" id="sobre">
       <div className="about__container">
         <div className="about__header">
           <h2 className="about__title">Sobre</h2>
