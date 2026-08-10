@@ -6,7 +6,7 @@ import fotoperfil from '../../assets/fotoperfil.jpeg';
 // --- Personalize aqui ---
 const WHATSAPP_NUMBER = '5511911543874'; // DDI + DDD + número, sem espaços/símbolos
 const WHATSAPP_MESSAGE = 'Olá! Vim pelo site da PettaTech e gostaria de saber mais.';
-const EMAIL = 'pettatech@outlook.com.br;
+const EMAIL = 'pettatech@outlook.com.br';
 // ------------------------
 
 const stats = [
