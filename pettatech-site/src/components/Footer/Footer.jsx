@@ -26,9 +26,9 @@ function Footer() {
             <h3>Navegação</h3>
 
             <nav className="footer-nav" aria-label="Navegação do rodapé">
-              <a href="#home">Início</a>
-              <a href="#about">Sobre</a>
-              <a href="#contact">Contato</a>
+              <a href="#Home">Início</a>
+              <a href="#About">Sobre</a>
+              <a href="#Contact">Contato</a>
             </nav>
           </div>
 
