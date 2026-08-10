@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircle, Mail } from 'lucide-react';
 import './about.css';
-import fotoperfil from "./assets/fotoperfil.jpeg";
+import fotoperfil from '../../assets/fotoperfil.jpeg';
 
 // --- Personalize aqui ---
 const WHATSAPP_NUMBER = '5511911543874'; // DDI + DDD + número, sem espaços/símbolos
@@ -93,7 +93,7 @@ export default function About() {
           <div className="about__image">
             <div className="about__image-placeholder">
               <img
-                src={fotoperfil.jpeg}
+                src={fotoperfil}
                 alt="Sobre Nossa Empresa"
                 className="about__img"
               />
