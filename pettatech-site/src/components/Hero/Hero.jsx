@@ -40,9 +40,14 @@ export default function Hero() {
             </ul>
 
             <div className="hero-reveal hero-delay-4 mt-8 flex flex-wrap gap-4">
-              <button className="hero-button-primary rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition hover:bg-sky-400">
-                Diagnóstico Gratuito
-              </button>
+              <a
+                href="https://wa.me/5511911543874"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-button-primary rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition hover:bg-sky-400"
+              >
+                1º Diagnóstico Grátis
+              </a>
               <button className="hero-button-secondary rounded-full border border-slate-700 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800">
                 Conheça os Serviços
               </button>
@@ -52,7 +57,7 @@ export default function Hero() {
           <div className="relative">
             <div className="hero-reveal hero-delay-5 hero-photo overflow-hidden rounded-[22px] border border-slate-700 bg-slate-900">
               <img
-                src={fotoperfil}
+                src={fotoperfil.jpeg}
                 alt="Foto profissional da Petta Tech"
                 className="h-80 w-full object-cover"
               />
