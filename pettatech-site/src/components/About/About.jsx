@@ -92,7 +92,7 @@ export default function About() {
           <div className="about__image">
             <div className="about__image-placeholder">
               <img
-                src="/hero.png"
+                src="fotoperfil.jpeg"
                 alt="Sobre Nossa Empresa"
                 className="about__img"
               />

@@ -48,9 +48,12 @@ export default function Hero() {
               >
                 1º Diagnóstico Grátis
               </a>
-              <button className="hero-button-secondary rounded-full border border-slate-700 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800">
+              <a
+                href="#servicos"
+                className="hero-button-secondary rounded-full border border-slate-700 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
+              >
                 Conheça os Serviços
-              </button>
+              </a>
             </div>
           </div>
 
