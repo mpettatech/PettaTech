@@ -29,6 +29,15 @@ export default function Navbar() {
             Sites
           </Link>
 
+          <a
+            href="https://hd-externo-1tb-ps4-desbloqueado-monte-sua-bibliot.ai.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-300 hover:text-white transition"
+          >
+            Jogos
+          </a>
+
           <a href="/#sobre"
             className="text-slate-300 hover:text-white transition">
             Sobre
@@ -67,6 +76,15 @@ export default function Navbar() {
             <a href="/#servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
 
             <Link to="/sites" onClick={() => setMenuOpen(false)}>Sites</Link>
+
+            <a
+              href="https://hd-externo-1tb-ps4-desbloqueado-monte-sua-bibliot.ai.studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+            >
+              Jogos
+            </a>
 
             <a href="/#sobre" onClick={() => setMenuOpen(false)}>Sobre</a>
 
