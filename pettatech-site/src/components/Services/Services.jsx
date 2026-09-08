@@ -4,6 +4,7 @@ import {
   MonitorSmartphone,
   Database,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -23,7 +24,7 @@ const services = [
     title: "Criar um site",
     description:
       "Desenvolvimento de sites institucionais, landing pages e lojas virtuais para sua empresa.",
-    href: "https://mpettatech.github.io/PettaTech/sites",
+    href: "/sites",
   },
   {
     icon: Database,
@@ -76,13 +77,13 @@ export default function Services() {
           );
 
           return service.href ? (
-            <a
+            <Link
               key={service.title}
-              href={service.href}
+              to={service.href}
               className="block bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-blue-500 transition"
             >
               {cardContent}
-            </a>
+            </Link>
           ) : (
             <div
               key={service.title}
