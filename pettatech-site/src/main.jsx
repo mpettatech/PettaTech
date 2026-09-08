@@ -4,9 +4,13 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 
+const basename = window.location.pathname.startsWith('/PettaTech')
+  ? '/PettaTech'
+  : undefined
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,
