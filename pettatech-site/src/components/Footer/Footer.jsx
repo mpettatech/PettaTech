@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-main">
           {/* Brand */}
           <div className="footer-brand">
-            <a href="#home" className="footer-logo">
+            <a href="/" className="footer-logo">
               Petta<span>Tech</span>
             </a>
 
@@ -26,9 +26,9 @@ function Footer() {
             <h3>Navegação</h3>
 
             <nav className="footer-nav" aria-label="Navegação do rodapé">
-              <a href="#">Início</a>
-              <a href="#sobre">Sobre</a>
-              <a href="#contato">Contato</a>
+              <a href="/">Início</a>
+              <a href="/#sobre">Sobre</a>
+              <a href="/#contato">Contato</a>
             </nav>
           </div>
 

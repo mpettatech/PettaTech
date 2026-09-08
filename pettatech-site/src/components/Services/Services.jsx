@@ -20,9 +20,10 @@ const services = [
   },
   {
     icon: MonitorSmartphone,
-    title: "Consultoria em TI",
+    title: "Criar um site",
     description:
-      "Infraestrutura, Microsoft 365, Cloud e suporte para sua empresa.",
+      "Desenvolvimento de sites institucionais, landing pages e lojas virtuais para sua empresa.",
+    href: "https://mpettatech.github.io/sites/",
   },
   {
     icon: Database,
@@ -57,32 +58,38 @@ export default function Services() {
 
           const Icon = service.icon;
 
-          return (
-
-            <div
-              key={service.title}
-              className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-blue-500 transition"
-            >
-
+          const cardContent = (
+            <>
               <Icon
                 size={40}
                 className="text-blue-500 mb-6"
               />
 
               <h3 className="text-xl font-semibold mb-4">
-
                 {service.title}
-
               </h3>
 
               <p className="text-slate-400">
-
                 {service.description}
-
               </p>
+            </>
+          );
 
+          return service.href ? (
+            <a
+              key={service.title}
+              href={service.href}
+              className="block bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-blue-500 transition"
+            >
+              {cardContent}
+            </a>
+          ) : (
+            <div
+              key={service.title}
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-blue-500 transition"
+            >
+              {cardContent}
             </div>
-
           );
 
         })}
