@@ -29,7 +29,7 @@ const services = [
     icon: Database,
     title: "Sistemas Empresariais",
     description:
-      "SAP Business One, Dynamics AX, Banco de dados, desenvolvimento.",
+      "ERP, CRM, Banco de dados, desenvolvimento.",
   },
 ];
 
