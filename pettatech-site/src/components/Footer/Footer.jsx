@@ -1,4 +1,5 @@
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,9 @@ function Footer() {
         <div className="footer-main">
           {/* Brand */}
           <div className="footer-brand">
-            <a href="#home" className="footer-logo">
+            <Link to="/" className="footer-logo">
               Petta<span>Tech</span>
-            </a>
+            </Link>
 
             <p className="footer-description">
               Criando experiências digitais modernas,
@@ -26,9 +27,9 @@ function Footer() {
             <h3>Navegação</h3>
 
             <nav className="footer-nav" aria-label="Navegação do rodapé">
-              <a href="#">Início</a>
-              <a href="#sobre">Sobre</a>
-              <a href="#contato">Contato</a>
+              <Link to="/">Início</Link>
+              <Link to="/#sobre">Sobre</Link>
+              <Link to="/#contato">Contato</Link>
             </nav>
           </div>
 

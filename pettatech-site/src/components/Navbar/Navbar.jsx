@@ -1,7 +1,6 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import Contact from "../Contact/Contact";
-import About from "../About/About";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,27 +10,34 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto h-20 flex items-center justify-between px-6">
 
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold tracking-tight">
+        <Link to="/" className="text-2xl font-bold tracking-tight">
           <span className="text-blue-500">Petta</span> Tech
-        </a>
+        </Link>
 
         {/* Desktop */}
         <nav className="hidden md:flex items-center gap-8">
 
-          <a href="#servicos"
+          <Link to="/#servicos"
             className="text-slate-300 hover:text-white transition">
             Serviços
-          </a>
+          </Link>
 
-          <a href="#sobre"
+          <Link
+            to="/sites"
+            className="text-slate-300 hover:text-white transition"
+          >
+            Sites
+          </Link>
+
+          <Link to="/#sobre"
             className="text-slate-300 hover:text-white transition">
             Sobre
-          </a>
+          </Link>
 
-          <a href="#contato"
+          <Link to="/#contato"
             className="text-slate-300 hover:text-white transition">
             Contato
-          </a>
+          </Link>
 
           <a
             href="https://wa.me/5511911543874"
@@ -58,11 +64,13 @@ export default function Navbar() {
 
           <nav className="flex flex-col p-6 gap-5">
 
-            <a href="#servicos">Serviços</a>
+            <Link to="/#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
 
-            <a href="#sobre">Sobre</a>
+            <Link to="/sites" onClick={() => setMenuOpen(false)}>Sites</Link>
 
-            <a href="#contato">Contato</a>
+            <Link to="/#sobre" onClick={() => setMenuOpen(false)}>Sobre</Link>
+
+            <Link to="/#contato" onClick={() => setMenuOpen(false)}>Contato</Link>
 
             <a
               href="https://wa.me/5511911543874"
