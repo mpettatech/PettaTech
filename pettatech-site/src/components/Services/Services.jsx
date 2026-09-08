@@ -23,7 +23,7 @@ const services = [
     title: "Criar um site",
     description:
       "Desenvolvimento de sites institucionais, landing pages e lojas virtuais para sua empresa.",
-    href: "https://mpettatech.github.io/sites/",
+    href: "https://mpettatech.github.io/PettaTech/sites",
   },
   {
     icon: Database,
