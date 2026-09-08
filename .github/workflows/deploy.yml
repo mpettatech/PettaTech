@@ -1,0 +1,134 @@
+name: Deploy Site Prod
+
+on:
+  push:
+    branches:
+      - site-dev
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+
+  # ==========================================
+  # 1. BUILD E VALIDAÇÃO
+  # ==========================================
+  build:
+    name: Build e validação
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./pettatech-site
+
+    steps:
+      - name: Checkout site-dev
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ./pettatech-site/package-lock.json
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Salvar build
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./pettatech-site/dist/
+
+
+  # ==========================================
+  # 2. MERGE SITE-DEV → SITE-PROD
+  # ==========================================
+  merge:
+    name: Merge site-dev → site-prod
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout completo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configurar Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Atualizar branches
+        run: |
+          git fetch origin site-dev
+          git fetch origin site-prod
+
+      - name: Checkout site-prod
+        run: |
+          git checkout site-prod
+          git pull origin site-prod
+
+      - name: Fazer merge da site-dev
+        run: |
+          git merge origin/site-dev --no-ff -m "Merge site-dev into site-prod"
+
+      - name: Enviar site-prod
+        run: |
+          git push origin site-prod
+
+
+  # ==========================================
+  # 3. DEPLOY GITHUB PAGES
+  # ==========================================
+  deploy:
+    name: Deploy GitHub Pages
+    needs: merge
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./pettatech-site
+
+    steps:
+      - name: Checkout site-prod
+        uses: actions/checkout@v4
+        with:
+          ref: site-prod
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: ./pettatech-site/package-lock.json
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload do build
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./pettatech-site/dist
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
