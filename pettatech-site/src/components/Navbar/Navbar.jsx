@@ -17,10 +17,10 @@ export default function Navbar() {
         {/* Desktop */}
         <nav className="hidden md:flex items-center gap-8">
 
-          <a href="/#servicos"
+          <Link to="/#servicos"
             className="text-slate-300 hover:text-white transition">
             Serviços
-          </a>
+          </Link>
 
           <Link
             to="/sites"
@@ -38,15 +38,15 @@ export default function Navbar() {
             Jogos
           </a>
 
-          <a href="/#sobre"
+          <Link to="/#sobre"
             className="text-slate-300 hover:text-white transition">
             Sobre
-          </a>
+          </Link>
 
-          <a href="/#contato"
+          <Link to="/#contato"
             className="text-slate-300 hover:text-white transition">
             Contato
-          </a>
+          </Link>
 
           <a
             href="https://wa.me/5511911543874"
@@ -73,7 +73,7 @@ export default function Navbar() {
 
           <nav className="flex flex-col p-6 gap-5">
 
-            <a href="/#servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
+            <Link to="/#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
 
             <Link to="/sites" onClick={() => setMenuOpen(false)}>Sites</Link>
 
@@ -86,9 +86,9 @@ export default function Navbar() {
               Jogos
             </a>
 
-            <a href="/#sobre" onClick={() => setMenuOpen(false)}>Sobre</a>
+            <Link to="/#sobre" onClick={() => setMenuOpen(false)}>Sobre</Link>
 
-            <a href="/#contato" onClick={() => setMenuOpen(false)}>Contato</a>
+            <Link to="/#contato" onClick={() => setMenuOpen(false)}>Contato</Link>
 
             <a
               href="https://wa.me/5511911543874"
