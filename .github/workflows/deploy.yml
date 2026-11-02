@@ -82,7 +82,9 @@ jobs:
 
       - name: Fazer merge da site-dev
         run: |
-          git merge -X theirs origin/site-dev --no-ff -m "Merge site-dev into site-prod"
+          git merge -X theirs --no-commit --no-ff origin/site-dev
+          git checkout HEAD -- .github/workflows/deploy.yml
+          git commit -m "Merge site-dev into site-prod"
 
       - name: Enviar site-prod
         run: |
