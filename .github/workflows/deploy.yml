@@ -82,7 +82,7 @@ jobs:
 
       - name: Fazer merge da site-dev
         run: |
-          git merge origin/site-dev --no-ff -m "Merge site-dev into site-prod"
+          git merge -X theirs origin/site-dev --no-ff -m "Merge site-dev into site-prod"
 
       - name: Enviar site-prod
         run: |
